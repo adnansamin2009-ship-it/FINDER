@@ -4,14 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Summer Program Finder</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./app.js"></script>
   </head>
   <body>
-    <h1>Summer Program Finder</h1>
-    <p>Search tech summer programs for high school and college students.</p>
+    <main class="container">
+      <h1>Summer Program Finder</h1>
+      <p>Search tech summer programs for high school and college students.</p>
 
-    <label for="q">Search</label>
-    <input id="q" type="text" placeholder="Try: cybersecurity, Columbia, NYC" />
+      <input id="q" type="search" placeholder="Search: cybersecurity, Columbia, NYC..." />
 
-    <div id="results"></div>
+      <div id="results" class="results"></div>
+    </main>
   </body>
 </html>
+
