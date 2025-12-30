@@ -1,0 +1,109 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finder | NYC College Summer Programs</title>
+
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+
+  <!-- Splash: no box, no progress bar -->
+  <div id="splash" class="splash" aria-label="Finder splash screen">
+    <div class="splashInner">
+      <div class="splashTitle">Finder</div>
+      <div class="splashSub">A fast way to discover NYC college programs</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand" role="banner">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Finder</h1>
+          <p>NYC colleges and summer programs</p>
+        </div>
+      </div>
+
+      <div class="pill" title="Search colleges">
+        <span>Search</span>
+        <input id="searchInput" placeholder="Baruch, NYU, Hunter, CCNY..." autocomplete="off" />
+      </div>
+
+      <div class="btnrow">
+       
+      <a class="btn feedback"
+   target="_blank"
+   rel="noopener noreferrer"
+   href="https://mail.google.com/mail/?view=cm&fs=1&to=adnans39@nycstudents.net&su=Finder%20Feedback"
+>
+  <span>Give us your feedback</span>
+</a>
+
+      </div>
+    </div>
+
+    <div id="homeView" class="view active">
+      <div class="panel">
+        <p class="lead">
+          Scroll and choose a college. Then pick an interest to see summer program options.
+        </p>
+        <div id="collegeGrid" class="grid" aria-label="NYC colleges list"></div>
+      </div>
+    </div>
+
+    <div id="collegeView" class="view">
+      <div class="panel">
+        <div class="btnrow mb12">
+          <button class="btn" id="backToGridBtn" type="button">Back to colleges</button>
+        </div>
+
+        <div class="hero">
+          <div class="heroimg">
+            <img id="collegeHeroImg" alt="Selected college image" />
+          </div>
+          <div class="herotext">
+            <h2 id="collegeTitle"></h2>
+            <p id="collegeDesc"></p>
+
+            <div class="hintLabel">Choose what you are interested in</div>
+            <div class="chips" id="interestChips" aria-label="Interest categories"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="resultsView" class="view">
+      <div class="panel">
+        <div class="btnrow mb12">
+          <button class="btn" id="backToCollegeBtn" type="button">Back to interests</button>
+          <button class="btn good" id="backToHomeBtn2" type="button">Back to colleges</button>
+        </div>
+
+        <div class="resultsTop">
+          <div>
+            <div class="smallMuted">Results for</div>
+            <div id="resultsTitle" class="resultsTitle"></div>
+          </div>
+
+          <div class="pill pillSmall" title="Filter programs">
+            <span>Filter</span>
+            <input id="programFilterInput" placeholder="Try research, free, portfolio..." autocomplete="off" />
+          </div>
+        </div>
+
+        <div id="programList" class="list" aria-label="Program results list"></div>
+
+        <div class="footnote">
+          Links open in a new tab. Learn more goes to the overview page. Apply now goes to the application page.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
